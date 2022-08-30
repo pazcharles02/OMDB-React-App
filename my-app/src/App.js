@@ -4,12 +4,13 @@ import MovieInfo from "./components/movieinfo/MovieInfo";
 
 
 function App() {
-    const [searchTerm] = useState("lol");
+    const [searchTerm, setSearchTerm] = useState("lol");
+    const [results, setResults] = useState("");
 
     return (
         <React.Fragment>
-            <SearchBar searchTerm={searchTerm} />
-            <MovieInfo searchTerm={searchTerm} />
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} setResults={setResults} />
+            <MovieInfo results={results} setResults={setResults} />
         </React.Fragment>
     )
 }
