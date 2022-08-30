@@ -1,12 +1,13 @@
 import React from "react";
 import "./MovieInfo.css"
 
-const OMDB_API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+// const OMDB_API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 function MovieInfo(props) {
     const results = props.results
     const setResults = props.setResults;
     const searchTerm = props.searchTerm;
+    const OMDB_API_KEY = props.apiKey;
 
     let searchResults;
 
