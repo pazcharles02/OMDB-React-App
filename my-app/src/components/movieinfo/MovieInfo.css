@@ -1,8 +1,38 @@
-img {
-    width: 10%;
-    height: 20%;
+#MovieInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: center;
+}
+
+article {
+    position: center;
+}
+
+.search_result {
+    display: inline-block;
+    text-align: center;
+    width: var(--container-width-lg);
 }
 
 h1 {
-    
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+img {
+    margin-top: 3rem;
+    display: inline-block;
+    height: 30%;
+    width: auto;
+}
+
+button {
+    background-color: var(--color-light);
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin-top: 1rem;
 }

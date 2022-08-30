@@ -13,24 +13,22 @@ function MovieInfo(props) {
     const handleEvent = () => {
         const url = "https://www.omdbapi.com/?apikey=" + OMDB_API_KEY + "&s="
         console.log("searching... " + searchTerm)
+        setResults("searching...")
         let xhttp = new XMLHttpRequest();
         xhttp.open("GET", url + searchTerm, true);
         xhttp.send();
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log(JSON.parse(this.responseText))
                 searchResults = JSON.parse(this.responseText);
                 setResults(() => {
                     return (
-                        searchResults["Search"].map(({Title, Year, imdbID, type, Poster}) => {
-                            console.log(searchResults["Search"]);
-                            console.log(imdbID);
+                        searchResults["Search"].map(({Title, Year, imdbID, Poster}) => {
                             return (
                                 <article key={imdbID} className={"search_result"}>
                                     <div className={"movie_poster_image"}>
-                                        <img src={Poster} alt={Title}/>
+                                        <img src={Poster} alt={"Poster Unavailable"}/>
                                     </div>
-                                    <h3>{Title}</h3>
+                                    <h1>{Title}</h1>
                                     <p>Year of release: {Year}</p>
                                     <button>Label</button>
                                 </article>
@@ -47,10 +45,10 @@ function MovieInfo(props) {
     }
 
     return (
-        <section id="MovieInfo">
-            <h1>{results}</h1>
+        <div className={"container"} id={"MovieInfo"}>
+            {results}
             <p onClick={handleEvent} id={"trigger_search"}/>
-        </section>
+        </div>
     )
 }
 

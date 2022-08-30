@@ -1,6 +1,6 @@
 #searchbar {
     background: rgba(0, 0, 0, 0.3);
-    width: max-content;
+    width: 80%;
     display: block;
     padding: 0.7rem 1.7rem;
     z-index: 2;
@@ -11,6 +11,7 @@
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    text-align: center;
 }
 
 #searchbar textarea {
@@ -20,7 +21,7 @@
     color: white;
     resize: none;
     height: 3rem;
-    width: 40rem;
+    width: 100%;
     background:rgba(0, 0, 0, 0.3);
 }
 

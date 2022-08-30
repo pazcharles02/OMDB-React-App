@@ -7,9 +7,10 @@ function SearchBar(props) {
 
     useEffect(() => {
         const timeOutId = setTimeout(() => {
-            document.getElementById("trigger_search").click();
+            if (searchTerm !== "") {
+                document.getElementById("trigger_search").click();
+            }
         }, 3000);
-        console.log(searchTerm);
         return () => clearTimeout(timeOutId);
     }, [searchTerm])
 
