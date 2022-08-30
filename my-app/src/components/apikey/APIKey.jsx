@@ -7,6 +7,7 @@ function APIKey(props) {
 
     return (
         <section id={"api_key"}>
+            Enter API Key
             <textarea onChange={event => setApiKey(event.target.value)} value={apiKey}/>
         </section>
     )

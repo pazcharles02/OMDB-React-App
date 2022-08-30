@@ -1,12 +1,12 @@
 import React from "react";
 import "./MovieInfo.css"
 
-// const OMDB_API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 function MovieInfo(props) {
     const results = props.results
     const setResults = props.setResults;
     const searchTerm = props.searchTerm;
+    // const OMDB_API_KEY = process.env.REACT_APP_OMDB_API_KEY;
     const OMDB_API_KEY = props.apiKey;
 
     let searchResults;
@@ -31,7 +31,10 @@ function MovieInfo(props) {
                                     </div>
                                     <h1>{Title}</h1>
                                     <p>Year of release: {Year}</p>
-                                    <button>Label</button>
+                                    <button id={"movie_button"}>
+                                        Button
+                                        {/* TODO : <label for={"movie_button"}></label> */}
+                                    </button>
                                 </article>
                             )
                         })

@@ -7,7 +7,7 @@ import APIKey from "./components/apikey/APIKey";
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
     const [results, setResults] = useState("");
-    const [apiKey, setApiKey] = useState("Enter API Key");
+    const [apiKey, setApiKey] = useState("");
 
     return (
         <React.Fragment>
